@@ -451,30 +451,17 @@
         container.innerHTML = data.map(m => {
             let formattedDate = m.dateStr || '';
             
-            // Revert injected year if the user wants exact Flashscore literal string, e.g. 04.04. 21:00
-            const parts = formattedDate.split(" ");
-            if (parts.length === 2 && /^\d{2}\.\d{2}\.$/.test(parts[0])) {
-                formattedDate = `${parts[0]} ${parts[1]}`;
-            }
-            
-            let badgeHtml = '<div style="width: 24px;"></div>';
-            if (m.score_home !== '' && m.score_away !== '' && m.score_home !== '-' && m.score_away !== '-') {
-                const sHome = parseInt(m.score_home);
-                const sAway = parseInt(m.score_away);
-                const isMeridaHome = m.home.includes('Mérida');
-                
-                if (sHome === sAway) {
-                    badgeHtml = `<div class="badge badge-e"></div>`;
-                } else if ((isMeridaHome && sHome > sAway) || (!isMeridaHome && sAway > sHome)) {
-                    badgeHtml = `<div class="badge badge-g"></div>`;
-                } else {
-                    badgeHtml = `<div class="badge badge-p"></div>`;
-                }
-            }
+            // Apilar fecha y hora como en la captura
+            const dParts = formattedDate.split(" ");
+            const dateTop = dParts[0] || '';
+            const dateBottom = dParts[1] || '';
 
             return `
             <div class="fs-match-row">
-                <div class="fs-match-date">${formattedDate}</div>
+                <div class="fs-match-date">
+                    <div style="margin-bottom: 4px;">${dateTop}</div>
+                    <div style="color: var(--text-secondary);">${dateBottom}</div>
+                </div>
                 <div class="fs-match-teams">
                     <div class="fs-team ${m.home.includes('Mérida') ? 'fw-bold' : ''}">
                         ${m.home}
