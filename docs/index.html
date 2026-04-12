@@ -464,11 +464,11 @@
                 const isMeridaHome = m.home.includes('Mérida');
                 
                 if (sHome === sAway) {
-                    badgeHtml = `<div class="badge badge-e">E</div>`;
+                    badgeHtml = `<div class="badge badge-e"></div>`;
                 } else if ((isMeridaHome && sHome > sAway) || (!isMeridaHome && sAway > sHome)) {
-                    badgeHtml = `<div class="badge badge-g">G</div>`;
+                    badgeHtml = `<div class="badge badge-g"></div>`;
                 } else {
-                    badgeHtml = `<div class="badge badge-p">P</div>`;
+                    badgeHtml = `<div class="badge badge-p"></div>`;
                 }
             }
 
