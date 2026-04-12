@@ -18,7 +18,6 @@ def extract_flashscore_data():
     standings = []
     players = []
     noticias = []
-    traspasos = []
     
     try:
         with sync_playwright() as p:
@@ -114,20 +113,25 @@ def extract_flashscore_data():
             print(f"Scraping Plantilla...")
             page.goto(f"{BASE_URL}/plantilla/")
             page.wait_for_timeout(3000)
-            player_rows = page.query_selector_all('.lineupTable__row')
-            for row in player_rows:
-                name_el = row.query_selector('.lineupTable__cell--name')
-                age_el = row.query_selector('.lineupTable__cell--age')
-                if not name_el: continue
-                
-                name = name_el.inner_text().strip()
-                age = age_el.inner_text().strip() if age_el else ""
-                
-                players.append({
-                    "name": name,
-                    "age": age,
-                    "pos": "Midfielder" # Defaulting for now
-                })
+            player_elements = page.query_selector_all('.lineupTable__title, .lineupTable__row')
+            current_pos = "Jugadores"
+            for el in player_elements:
+                class_name = el.get_attribute('class') or ''
+                if 'lineupTable__title' in class_name:
+                    current_pos = el.inner_text().strip()
+                elif 'lineupTable__row' in class_name:
+                    name_el = el.query_selector('.lineupTable__cell--name')
+                    age_el = el.query_selector('.lineupTable__cell--age')
+                    if not name_el: continue
+                    
+                    name = name_el.inner_text().strip()
+                    age = age_el.inner_text().strip() if age_el else ""
+                    if name:
+                        players.append({
+                            "name": name,
+                            "age": age,
+                            "pos": current_pos
+                        })
 
             # 5. Noticias
             print(f"Scraping Noticias...")
@@ -155,33 +159,11 @@ def extract_flashscore_data():
                         "url": href
                     })
 
-            # 6. Traspasos
-            print(f"Scraping Traspasos...")
-            page.goto(f"{BASE_URL}/traspasos/")
-            page.wait_for_timeout(3000)
-            transfer_rows = page.query_selector_all('.transfer')
-            if not transfer_rows:
-                # Traspasos tab might exist but have a different class, or be empty. 
-                # Usually .transfer__row or similar on flashscore. Let's look for any generic row.
-                transfer_rows = page.query_selector_all('.transfer__row, .transferTable__row')
-            
-            for row in transfer_rows[:10]:
-                date_el = row.query_selector('.transfer__date, .time')
-                name_el = row.query_selector('.transfer__player, .player a')
-                type_el = row.query_selector('.transfer__type, .type')
-                
-                if name_el:
-                    traspasos.append({
-                        "date": date_el.inner_text().strip() if date_el else "",
-                        "player": name_el.inner_text().strip(),
-                        "type": type_el.inner_text().strip() if type_el else "Unknown"
-                    })
-
             browser.close()
     except Exception as e:
         print(f"Error scraping with Playwright: {e}")
 
-    return resultados, partidos, standings, players, noticias, traspasos
+    return resultados, partidos, standings, players, noticias
 
 def main():
     metadata = {
@@ -191,14 +173,13 @@ def main():
     }
 
     print("Starting Flashscore Playwright Extra Scraper...")
-    resultados, partidos, standings, players, noticias, traspasos = extract_flashscore_data()
+    resultados, partidos, standings, players, noticias = extract_flashscore_data()
 
     save_json("resultados", {"response": resultados})
     save_json("partidos", {"response": partidos})
     save_json("standings", {"response": [{"league": {"standings": [standings]}}]})
     save_json("players", {"response": [{"player": p} for p in players]})
     save_json("news", noticias)
-    save_json("traspasos", traspasos)
     save_json("metadata", metadata)
 
     print("Scraping update complete.")
