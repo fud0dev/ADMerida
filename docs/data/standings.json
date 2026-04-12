@@ -1,16 +1,192 @@
 {
-  "get": "standings",
-  "parameters": {
-    "league": "431",
-    "season": "2025"
-  },
-  "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-  },
-  "results": 0,
-  "paging": {
-    "current": 1,
-    "total": 1
-  },
-  "response": []
+  "response": [
+    {
+      "league": {
+        "standings": [
+          [
+            {
+              "rank": 1,
+              "team": {
+                "name": "Tenerife",
+                "id": 1
+              },
+              "points": 66,
+              "goalsDiff": 33
+            },
+            {
+              "rank": 2,
+              "team": {
+                "name": "Celta de Vigo B",
+                "id": 2
+              },
+              "points": 57,
+              "goalsDiff": 10
+            },
+            {
+              "rank": 3,
+              "team": {
+                "name": "Real Madrid B",
+                "id": 3
+              },
+              "points": 49,
+              "goalsDiff": 10
+            },
+            {
+              "rank": 4,
+              "team": {
+                "name": "Zamora",
+                "id": 4
+              },
+              "points": 49,
+              "goalsDiff": 6
+            },
+            {
+              "rank": 5,
+              "team": {
+                "name": "Pontevedra",
+                "id": 5
+              },
+              "points": 49,
+              "goalsDiff": 14
+            },
+            {
+              "rank": 6,
+              "team": {
+                "name": "Barakaldo",
+                "id": 6
+              },
+              "points": 48,
+              "goalsDiff": 8
+            },
+            {
+              "rank": 7,
+              "team": {
+                "name": "Ponferradina",
+                "id": 7
+              },
+              "points": 47,
+              "goalsDiff": 8
+            },
+            {
+              "rank": 8,
+              "team": {
+                "name": "Unionistas",
+                "id": 8
+              },
+              "points": 47,
+              "goalsDiff": 3
+            },
+            {
+              "rank": 9,
+              "team": {
+                "name": "Lugo",
+                "id": 9
+              },
+              "points": 45,
+              "goalsDiff": -2
+            },
+            {
+              "rank": 10,
+              "team": {
+                "name": "AD Mérida",
+                "id": 2501
+              },
+              "points": 45,
+              "goalsDiff": -3
+            },
+            {
+              "rank": 11,
+              "team": {
+                "name": "Arenas Getxo",
+                "id": 11
+              },
+              "points": 44,
+              "goalsDiff": -9
+            },
+            {
+              "rank": 12,
+              "team": {
+                "name": "Athletic Club B",
+                "id": 12
+              },
+              "points": 44,
+              "goalsDiff": -3
+            },
+            {
+              "rank": 13,
+              "team": {
+                "name": "Racing Club Ferrol",
+                "id": 13
+              },
+              "points": 42,
+              "goalsDiff": -6
+            },
+            {
+              "rank": 14,
+              "team": {
+                "name": "Real Avilés",
+                "id": 14
+              },
+              "points": 40,
+              "goalsDiff": -7
+            },
+            {
+              "rank": 15,
+              "team": {
+                "name": "Ourense CF",
+                "id": 15
+              },
+              "points": 37,
+              "goalsDiff": -1
+            },
+            {
+              "rank": 16,
+              "team": {
+                "name": "CF Talavera",
+                "id": 16
+              },
+              "points": 35,
+              "goalsDiff": -9
+            },
+            {
+              "rank": 17,
+              "team": {
+                "name": "Guadalajara",
+                "id": 17
+              },
+              "points": 35,
+              "goalsDiff": -12
+            },
+            {
+              "rank": 18,
+              "team": {
+                "name": "Cacereño",
+                "id": 18
+              },
+              "points": 34,
+              "goalsDiff": -11
+            },
+            {
+              "rank": 19,
+              "team": {
+                "name": "Osasuna B",
+                "id": 19
+              },
+              "points": 30,
+              "goalsDiff": -15
+            },
+            {
+              "rank": 20,
+              "team": {
+                "name": "Arenteiro",
+                "id": 20
+              },
+              "points": 27,
+              "goalsDiff": -14
+            }
+          ]
+        ]
+      }
+    }
+  ]
 }

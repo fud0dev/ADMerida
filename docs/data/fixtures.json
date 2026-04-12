@@ -1,17 +1,334 @@
 {
-  "get": "fixtures",
-  "parameters": {
-    "team": "2501",
-    "season": "2025",
-    "last": "10"
-  },
-  "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-  },
-  "results": 0,
-  "paging": {
-    "current": 1,
-    "total": 1
-  },
-  "response": []
+  "response": [
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.047315Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida",
+          "winner": false
+        },
+        "away": {
+          "name": "Tenerife",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.075875Z",
+        "status": {
+          "short": "NS"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Arenteiro",
+          "winner": null
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.103823Z",
+        "status": {
+          "short": "NS"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Arenas Getxo",
+          "winner": null
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.134120Z",
+        "status": {
+          "short": "NS"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida",
+          "winner": null
+        },
+        "away": {
+          "name": "Lugo",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.160641Z",
+        "status": {
+          "short": "NS"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Barakaldo",
+          "winner": null
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.189426Z",
+        "status": {
+          "short": "NS"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida",
+          "winner": null
+        },
+        "away": {
+          "name": "Unionistas",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.218808Z",
+        "status": {
+          "short": "NS"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Osasuna B",
+          "winner": null
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.242302Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Ponferradina",
+          "winner": true
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 1
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.267308Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida",
+          "winner": true
+        },
+        "away": {
+          "name": "Racing Club Ferrol",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.293659Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Athletic Club B",
+          "winner": false
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.328780Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida",
+          "winner": false
+        },
+        "away": {
+          "name": "Guadalajara",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 4
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.355982Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida",
+          "winner": false
+        },
+        "away": {
+          "name": "CF Talavera",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.382843Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Celta de Vigo B",
+          "winner": false
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.409543Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida",
+          "winner": true
+        },
+        "away": {
+          "name": "Cacereño",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T22:16:58.437417Z",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Ourense CF",
+          "winner": true
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      }
+    }
+  ]
 }

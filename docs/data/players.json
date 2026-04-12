@@ -1,16 +1,1076 @@
 {
-  "get": "players",
-  "parameters": {
-    "team": "2501",
-    "season": "2025"
-  },
-  "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-  },
-  "results": 0,
-  "paging": {
-    "current": 1,
-    "total": 1
-  },
-  "response": []
+  "response": [
+    {
+      "player": {
+        "name": "Csenterics Adrián",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gil Alejandro",
+        "age": "19",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dominguez Javier",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Lancho Javier",
+        "age": "24",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Martinez Navarro Gaizka",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pareja Luis",
+        "age": "27",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pipe",
+        "age": "32",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Rivas Manu",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Verges Eudald",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Areso Blanco Francisco Javier",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Bastos Almeida Geovanny Miguel",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Capitas Miguel",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dibrani Benjamin",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Herranz Corral Victor",
+        "age": "24",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Jacobo Rubio",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Solar Martin",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beneit Raul",
+        "age": "31",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Chiqui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Doncel Carlos",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "El Ftouhi Sofiane",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gomes Rui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Hallsson Sigurdur Bjartur",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pereira Rodrigo",
+        "age": "23",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beltrán Francisco",
+        "age": "35",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Cacharron Pablo",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dominguez Javier",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pareja Luis",
+        "age": "27",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Rivas Manu",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Verges Eudald",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Areso Blanco Francisco Javier",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Capitas Miguel",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dibrani Benjamin",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Jacobo Rubio",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Solar Martin",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beneit Raul",
+        "age": "31",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Chiqui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Doncel Carlos",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gomes Rui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pereira Rodrigo",
+        "age": "23",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beltrán Francisco",
+        "age": "35",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Cacharron Pablo",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Csenterics Adrián",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gil Alejandro",
+        "age": "19",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dominguez Javier",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Garcia Fernando",
+        "age": "?",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Lancho Javier",
+        "age": "24",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Martinez Mario",
+        "age": "23",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Martinez Navarro Gaizka",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pareja Luis",
+        "age": "27",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pipe",
+        "age": "32",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Rivas Manu",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Verges Eudald",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Areso Blanco Francisco Javier",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Bastos Almeida Geovanny Miguel",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Capitas Miguel",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dibrani Benjamin",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Herranz Corral Victor",
+        "age": "24",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Jacobo Rubio",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Solar Martin",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beneit Raul",
+        "age": "31",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Chiqui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Doncel Carlos",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "El Ftouhi Sofiane",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gomes Rui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Hallsson Sigurdur Bjartur",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pereira Rodrigo",
+        "age": "23",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beltrán Francisco",
+        "age": "35",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Csenterics Adrián",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gil Alejandro",
+        "age": "19",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dominguez Javier",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Lancho Javier",
+        "age": "24",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Martinez Navarro Gaizka",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pareja Luis",
+        "age": "27",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pipe",
+        "age": "32",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Rivas Manu",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Verges Eudald",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Areso Blanco Francisco Javier",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Bastos Almeida Geovanny Miguel",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Capitas Miguel",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dibrani Benjamin",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Herranz Corral Victor",
+        "age": "24",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Jacobo Rubio",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Solar Martin",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beneit Raul",
+        "age": "31",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Chiqui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Doncel Carlos",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "El Ftouhi Sofiane",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gomes Rui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Hallsson Sigurdur Bjartur",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pereira Rodrigo",
+        "age": "23",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beltrán Francisco",
+        "age": "35",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Cacharron Pablo",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dominguez Javier",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pareja Luis",
+        "age": "27",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Rivas Manu",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Verges Eudald",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Areso Blanco Francisco Javier",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Capitas Miguel",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dibrani Benjamin",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Jacobo Rubio",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Solar Martin",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beneit Raul",
+        "age": "31",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Chiqui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Doncel Carlos",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gomes Rui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pereira Rodrigo",
+        "age": "23",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beltrán Francisco",
+        "age": "35",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Cacharron Pablo",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Csenterics Adrián",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gil Alejandro",
+        "age": "19",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dominguez Javier",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Garcia Fernando",
+        "age": "?",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Lancho Javier",
+        "age": "24",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Martinez Mario",
+        "age": "23",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Martinez Navarro Gaizka",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pareja Luis",
+        "age": "27",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pipe",
+        "age": "32",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Rivas Manu",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Verges Eudald",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Areso Blanco Francisco Javier",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Bastos Almeida Geovanny Miguel",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Capitas Miguel",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Dibrani Benjamin",
+        "age": "22",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Herranz Corral Victor",
+        "age": "24",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Jacobo Rubio",
+        "age": "21",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Solar Martin",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beneit Raul",
+        "age": "31",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Chiqui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Doncel Carlos",
+        "age": "29",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "El Ftouhi Sofiane",
+        "age": "25",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Gomes Rui",
+        "age": "28",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Hallsson Sigurdur Bjartur",
+        "age": "26",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Pereira Rodrigo",
+        "age": "23",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    },
+    {
+      "player": {
+        "name": "Beltrán Francisco",
+        "age": "35",
+        "number": null,
+        "pos": "Midfielder"
+      }
+    }
+  ]
 }
