@@ -3,510 +3,449 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AD Mérida | Dashboard Oficial</title>
-    <meta name="description" content="Resultados, clasificación, noticias y plantilla del AD Mérida. Actualización automática cada 6 horas.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
-    
+    <title>AD Mérida | Flashscore Clone</title>
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --grana: #B22222;
-            --grana-dark: #8b0000;
-            --oro: #D4AF37;
-            --oro-light: #f1d37b;
-            --dark: #0a0a0a;
-            --surface: #1a1a1a;
-            --text-main: #ffffff;
-            --text-dim: #b0b0b0;
-            --win: #22c55e;
-            --draw: #eab308;
-            --loss: #ef4444;
+            --bg-body: #0d141e;      /* Flashscore dark background */
+            --bg-header: #020b12;    /* Darker header */
+            --bg-card: #15202b;      /* Primary container bg */
+            --bg-hover: #1e2d3b;     /* Hover state */
+            --text-primary: #ffffff; /* Main text */
+            --text-secondary: #9aa8b8; /* Subtext */
+            --accent-color: #ff3b40; /* Flashscore red accent */
+            --border-color: #2b3947; /* Borders between rows */
+            --win-color: #f7a600;    /* Flashscore win text color / Merida gold */
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
-            background-color: var(--dark);
-            color: var(--text-main);
-            font-family: 'Barlow', sans-serif;
-            overflow-x: hidden;
-            line-height: 1.6;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .heading-font {
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 1px;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-body);
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-            padding: 2rem 1rem;
-            text-align: center;
-            border-bottom: 2px solid var(--grana);
-            position: relative;
+        /* HEADER SECTION */
+        .header {
+            background-color: var(--bg-header);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--bg-body);
+        }
+        
+        .header-logo-bg {
+            background-color: white;
+            padding: 8px;
+            border-radius: 8px;
+            margin-right: 20px;
         }
 
-        .logo {
-            font-size: 3rem;
-            color: var(--oro);
-            margin-bottom: 0.5rem;
-            text-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .header-details h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-details h1 span {
+            margin-left: 10px;
+            color: var(--text-secondary);
+            font-size: 20px;
         }
 
         .header-info {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            color: var(--text-secondary);
+            font-size: 14px;
         }
 
-        /* Nav */
-        nav {
+        /* TABS NAVIGATION */
+        .tabs {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            background: var(--dark);
-            z-index: 100;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        nav a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.2rem;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s;
-            border-bottom: 2px solid transparent;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--oro);
-            border-bottom-color: var(--oro);
-        }
-
-        /* Container */
-        main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        section {
-            margin-bottom: 4rem;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--oro);
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .section-title::after {
-            content: '';
-            flex-grow: 1;
-            height: 2px;
-            background: linear-gradient(to right, var(--grana), transparent);
-        }
-
-        /* Partidos */
-        .fixtures-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .fixture-card {
-            background: var(--surface);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--text-dim);
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            position: relative;
-        }
-
-        .fixture-card.win { border-left-color: var(--win); }
-        .fixture-card.draw { border-left-color: var(--draw); }
-        .fixture-card.loss { border-left-color: var(--loss); }
-
-        .fixture-header {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: var(--text-dim);
-        }
-
-        .fixture-body {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .score {
-            font-size: 1.5rem;
-            font-family: 'Bebas Neue', cursive;
-            background: rgba(255,255,255,0.05);
-            padding: 0.2rem 0.8rem;
-            border-radius: 4px;
-        }
-
-        /* Clasificación */
-        .table-container {
+            background-color: var(--bg-header);
+            border-bottom: 1px solid var(--border-color);
             overflow-x: auto;
-            background: var(--surface);
-            border-radius: 8px;
-            padding: 1rem;
+            scrollbar-width: none;
         }
 
+        .tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab {
+            padding: 15px 20px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .tab:hover {
+            color: var(--text-primary);
+        }
+
+        .tab.active {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        /* CONTENT AREA */
+        .content {
+            padding: 20px;
+            background-color: var(--bg-body);
+        }
+
+        .tab-content {
+            display: none;
+            background-color: var(--bg-card);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* TABLE STYLES */
         table {
             width: 100%;
             border-collapse: collapse;
+        }
+
+        .table-header {
+            background-color: var(--bg-hover);
+            color: var(--text-secondary);
+            font-size: 12px;
+            text-transform: uppercase;
             text-align: left;
         }
 
-        th {
-            color: var(--oro);
-            font-family: 'Bebas Neue', cursive;
-            padding: 1rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        .table-header th {
+            padding: 10px 15px;
+            font-weight: 500;
         }
 
-        td {
-            padding: 0.8rem 1rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+        .table-row {
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+            font-size: 14px;
         }
 
-        tr.highlight {
-            background: rgba(178, 34, 34, 0.2);
-            border-left: 3px solid var(--oro);
+        .table-row:hover {
+            background-color: var(--bg-hover);
         }
 
-        .zone-ascenso { background: rgba(34, 197, 94, 0.1); }
-        .zone-playoff { background: rgba(234, 179, 8, 0.1); }
-        .zone-descenso { background: rgba(239, 68, 68, 0.1); }
-
-        /* Noticias */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+        .table-row td {
+            padding: 12px 15px;
         }
 
-        .news-card {
-            background: var(--surface);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s;
+        .score {
+            font-weight: 700;
+            color: var(--win-color);
+            text-align: right;
+            padding-right: 15px !important;
         }
 
-        .news-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--oro);
+        .date-col {
+            color: var(--text-secondary);
+            font-size: 13px;
         }
 
-        .news-content {
-            padding: 1.5rem;
+        .team-name {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
         }
 
-        .news-tag {
-            background: var(--grana);
-            color: white;
-            font-size: 0.6rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 2px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            display: inline-block;
+        /* SPECIFIC TAB COMPONENTS */
+        .section-title {
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .news-item {
+            display: block;
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: background-color 0.2s;
+        }
+
+        .news-item:hover {
+            background-color: var(--bg-hover);
         }
 
         .news-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-main);
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 5px;
         }
 
-        /* Plantilla */
-        .squad-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+        .news-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
         }
 
-        .position-label {
-            grid-column: 1 / -1;
-            font-family: 'Bebas Neue';
-            color: var(--oro);
-            border-bottom: 1px solid var(--grana);
-            margin-top: 1rem;
-        }
-
-        .player-card {
-            background: var(--surface);
-            padding: 1rem;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .player-number {
-            font-family: 'Bebas Neue';
-            font-size: 1.5rem;
-            color: var(--oro);
-            width: 30px;
-        }
-
-        .player-info h4 { font-size: 0.9rem; }
-        .player-info p { font-size: 0.7rem; color: var(--text-dim); }
-
-        footer {
+        .empty-state {
+            padding: 40px 20px;
             text-align: center;
-            padding: 4rem 1rem;
-            color: var(--text-dim);
-            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-size: 14px;
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @media (max-width: 600px) {
-            .section-title { font-size: 1.8rem; }
-            nav a { font-size: 1rem; padding: 0.5rem 0.5rem; }
+        
+        .sync-status {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 20px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">AD MÉRIDA</div>
-        <p class="header-info" id="last-updated">Cargando actualización...</p>
-    </header>
-
-    <nav>
-        <a href="#partidos">Partidos</a>
-        <a href="#clasificacion">Clasificación</a>
-        <a href="#noticias">Noticias</a>
-        <a href="#plantilla">Plantilla</a>
-    </nav>
-
-    <main>
-        <section id="partidos">
-            <h2 class="section-title">Resultados y Próximos</h2>
-            <div class="fixtures-grid" id="fixtures-container">
-                <!-- JS Inject -->
+<div class="container">
+    <div class="header">
+        <div class="header-logo-bg">
+            <img src="https://static.flashscore.com/res/image/data/6Z63QdUH-zNF1SoyR.png" alt="Mérida AD Logo" class="header-logo">
+        </div>
+        <div class="header-details">
+            <h1>AD Mérida <span>☆</span></h1>
+            <div class="header-info">
+                Estadio: <strong>Estadio Romano José Fouto (Mérida)</strong><br>
+                Capacidad: <strong>14 600</strong>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section id="clasificacion">
-            <h2 class="section-title">Clasificación</h2>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>POS</th>
-                            <th>EQUIPO</th>
-                            <th>PTS</th>
-                            <th>DG</th>
-                        </tr>
-                    </thead>
-                    <tbody id="standings-body">
-                        <!-- JS Inject -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('resumen', this)">RESUMEN</div>
+        <div class="tab" onclick="switchTab('noticias', this)">NOTICIAS</div>
+        <div class="tab" onclick="switchTab('resultados', this)">RESULTADOS</div>
+        <div class="tab" onclick="switchTab('partidos', this)">PARTIDOS</div>
+        <div class="tab" onclick="switchTab('clasificacion', this)">CLASIFICACIÓN</div>
+        <div class="tab" onclick="switchTab('traspasos', this)">TRASPASOS</div>
+        <div class="tab" onclick="switchTab('plantilla', this)">PLANTILLA</div>
+    </div>
 
-        <section id="noticias">
-            <h2 class="section-title">Últimas Noticias</h2>
-            <div class="news-grid" id="news-container">
-                <!-- JS Inject -->
-            </div>
-        </section>
+    <div class="content">
+        <!-- RESUMEN TAB -->
+        <div id="resumen" class="tab-content active">
+            <div class="section-title">Últimos Resultados</div>
+            <table id="resumen-table"><tbody></tbody></table>
+        </div>
 
-        <section id="plantilla">
-            <h2 class="section-title">Plantilla 25/26</h2>
-            <div id="squad-container">
-                <!-- JS Inject -->
-            </div>
-        </section>
-    </main>
+        <!-- NOTICIAS TAB -->
+        <div id="noticias" class="tab-content">
+            <div id="noticias-list"></div>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Dashboard AD Mérida - Información no oficial</p>
-        <p>Datos proporcionados por API-Football v3</p>
-    </footer>
+        <!-- RESULTADOS TAB -->
+        <div id="resultados" class="tab-content">
+            <div class="section-title">🇪🇸 ESPAÑA: Primera Federación - Grupo 1</div>
+            <table id="resultados-table"><tbody></tbody></table>
+        </div>
 
-    <script>
-        async function loadData() {
-            try {
-                const results = await Promise.all([
-                    fetch('data/fixtures.json').then(r => r.json()),
-                    fetch('data/standings.json').then(r => r.json()),
-                    fetch('data/news.json').then(r => r.json()),
-                    fetch('data/players.json').then(r => r.json()),
-                    fetch('data/metadata.json').then(r => r.json())
-                ]);
+        <!-- PARTIDOS TAB -->
+        <div id="partidos" class="tab-content">
+            <div class="section-title">🇪🇸 ESPAÑA: Primera Federación - Grupo 1</div>
+            <table id="partidos-table"><tbody></tbody></table>
+        </div>
 
-                const [fixtures, standings, news, players, metadata] = results;
-
-                renderMetadata(metadata);
-                
-                if (fixtures && fixtures.response) renderFixtures(fixtures.response);
-                if (standings && standings.response && standings.response[0]) {
-                    renderStandings(standings.response[0].league.standings[0]);
-                }
-                if (news) renderNews(news);
-                if (players && players.response) renderSquad(players.response);
-
-            } catch (err) {
-                console.error("Error cargando los datos:", err);
-                document.getElementById('last-updated').textContent = "Error al sincronizar datos";
-            }
-        }
-
-        function renderMetadata(meta) {
-            const date = new Date(meta.last_updated);
-            document.getElementById('last-updated').textContent = `Sincronizado: ${date.toLocaleString('es-ES')}`;
-        }
-
-        function renderFixtures(data) {
-            const container = document.getElementById('fixtures-container');
-            container.innerHTML = data.map(f => {
-                const isMeridaHome = f.teams.home.name.includes("Mérida");
-                const goalsH = f.goals.home;
-                const goalsA = f.goals.away;
-                
-                let resultClass = "";
-                if (f.fixture.status.short === "FT") {
-                    const meridaWon = (isMeridaHome && f.teams.home.winner) || (!isMeridaHome && f.teams.away.winner);
-                    const draw = goalsH === goalsA;
-                    resultClass = draw ? "draw" : (meridaWon ? "win" : "loss");
-                }
-
-                return `
-                <div class="fixture-card ${resultClass}">
-                    <div class="fixture-header">
-                        <span>${new Date(f.fixture.date).toLocaleDateString('es-ES')}</span>
-                    </div>
-                    <div class="fixture-body">
-                        <span>${f.teams.home.name}</span>
-                        <span class="score">${goalsH !== null ? goalsH : '-'} : ${goalsA !== null ? goalsA : '-'}</span>
-                        <span>${f.teams.away.name}</span>
-                    </div>
-                </div>
-                `;
-            }).join('');
-        }
-
-        function renderStandings(standings) {
-            const body = document.getElementById('standings-body');
-            body.innerHTML = standings.map(s => {
-                const isMerida = s.team.name.includes("Mérida") || s.team.id === 2501;
-                let zoneClass = "";
-                if (s.rank === 1) zoneClass = "zone-ascenso";
-                else if (s.rank <= 5) zoneClass = "zone-playoff";
-                else if (s.rank >= 16) zoneClass = "zone-descenso";
-
-                return `
-                <tr class="${isMerida ? 'highlight' : ''} ${zoneClass}">
-                    <td>${s.rank}</td>
-                    <td><strong>${s.team.name}</strong></td>
-                    <td>${s.points}</td>
-                    <td>${s.goalsDiff}</td>
+        <!-- CLASIFICACION TAB -->
+        <div id="clasificacion" class="tab-content">
+            <div class="section-title">Clasificación General</div>
+            <table>
+                <tr class="table-header">
+                    <th width="50">#</th>
+                    <th>Equipo</th>
+                    <th width="50">PTS</th>
+                    <th width="50">DG</th>
                 </tr>
-                `;
-            }).join('');
+                <tbody id="clasificacion-table"></tbody>
+            </table>
+        </div>
+
+        <!-- TRASPASOS TAB -->
+        <div id="traspasos" class="tab-content">
+            <div class="section-title">Últimos Traspasos</div>
+            <table id="traspasos-table"><tbody></tbody></table>
+        </div>
+
+        <!-- PLANTILLA TAB -->
+        <div id="plantilla" class="tab-content">
+            <div class="section-title">Plantilla 2025/2026</div>
+            <table>
+                <tr class="table-header">
+                    <th>Nombre</th>
+                    <th width="80">Edad</th>
+                </tr>
+                <tbody id="plantilla-table"></tbody>
+            </table>
+        </div>
+        
+        <div class="sync-status" id="syncStatus">Sincronizando datos...</div>
+    </div>
+</div>
+
+<script>
+    function switchTab(tabId, el) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        
+        el.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    async function loadData() {
+        try {
+            const urls = [
+                'data/resultados.json', 'data/partidos.json', 'data/standings.json',
+                'data/players.json', 'data/news.json', 'data/traspasos.json', 'data/metadata.json'
+            ];
+            const responses = await Promise.all(urls.map(u => fetch(u).catch(() => null)));
+            
+            const resultsData = (await (responses[0]?.json() || {response:[]})).response;
+            const partidosData = (await (responses[1]?.json() || {response:[]})).response;
+            const standingsData = await (responses[2]?.json() || {response:[]});
+            const playersData = await (responses[3]?.json() || {response:[]});
+            const newsData = await (responses[4]?.json() || []);
+            const transfersData = await (responses[5]?.json() || []);
+            const meta = await (responses[6]?.json() || {last_updated: 'Desconocido'});
+
+            renderMatches('resumen-table', resultsData.slice(0, 10)); // Top 10 for resumen
+            renderMatches('resultados-table', resultsData);
+            renderMatches('partidos-table', partidosData);
+            renderStandings(standingsData);
+            renderNews(newsData);
+            renderSquad(playersData.response || []);
+            renderTransfers(transfersData);
+
+            document.getElementById('syncStatus').innerText = "Última sincronización: " + new Date(meta.last_updated).toLocaleString();
+        } catch (e) {
+            console.error(e);
+            document.getElementById('syncStatus').innerText = "Error cargando datos. Visualizando caché / diseño base.";
+        }
+    }
+
+    function renderMatches(tableId, data) {
+        const tbody = document.getElementById(tableId).querySelector('tbody');
+        if (!data || data.length === 0) {
+            tbody.innerHTML = `<tr><td class="empty-state">No hay partidos disponibles</td></tr>`;
+            return;
+        }
+        
+        tbody.innerHTML = data.map(m => `
+            <tr class="table-row">
+                <td width="120" class="date-col">${m.dateStr || ''}</td>
+                <td class="team-name" style="${m.home.includes('Mérida') ? 'color: var(--text-primary); font-weight:700;' : ''}">${m.home}</td>
+                <td class="team-name" style="${m.away.includes('Mérida') ? 'color: var(--text-primary); font-weight:700;' : ''}">${m.away}</td>
+                <td class="score">${m.score_home || '-'} <br> ${m.score_away || '-'}</td>
+            </tr>
+        `).join('');
+    }
+
+    function renderStandings(data) {
+        const tbody = document.getElementById('clasificacion-table');
+        const st = data?.response?.[0]?.league?.standings?.[0];
+        if (!st || st.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="4" class="empty-state">No hay clasificación</td></tr>`;
+            return;
         }
 
-        function renderNews(news) {
-            const container = document.getElementById('news-container');
-            container.innerHTML = news.map(n => `
-                <div class="news-card">
-                    <div class="news-content">
-                        <span class="news-tag">${n.source}</span>
-                        <h3 class="news-title">${n.title}</h3>
-                        <p style="font-size:0.8rem; color:var(--text-dim)">${n.date}</p>
-                    </div>
-                </div>
-            `).join('');
+        tbody.innerHTML = st.map(s => `
+            <tr class="table-row" style="${s.team.name.includes('Mérida') ? 'background-color: rgba(255, 59, 64, 0.1);' : ''}">
+                <td>${s.rank}</td>
+                <td class="team-name" style="${s.team.name.includes('Mérida') ? 'font-weight: bold; color: var(--accent-color);' : ''}">${s.team.name}</td>
+                <td style="font-weight:700">${s.points}</td>
+                <td class="date-col">${s.goalsDiff}</td>
+            </tr>
+        `).join('');
+    }
+
+    function renderNews(data) {
+        const container = document.getElementById('noticias-list');
+        if (!data || data.length === 0) {
+            container.innerHTML = `<div class="empty-state">No hay noticias recientes</div>`;
+            return;
         }
+        container.innerHTML = data.map(n => `
+            <a href="${n.url}" target="_blank" class="news-item">
+                <div class="news-meta">${n.source} • ${n.date}</div>
+                <div class="news-title">${n.title}</div>
+            </a>
+        `).join('');
+    }
 
-        function renderSquad(players) {
-            const container = document.getElementById('squad-container');
-            const positions = ["Goalkeeper", "Defender", "Midfielder", "Forward"];
-            const labels = {
-                "Goalkeeper": "Porteros",
-                "Defender": "Defensas",
-                "Midfielder": "Centrocampistas",
-                "Forward": "Delanteros"
-            };
-
-            let html = "";
-            positions.forEach(pos => {
-                const filtered = players.filter(p => p.player.pos === pos || p.player.position === pos);
-                if (filtered.length > 0) {
-                    html += `<h3 class="position-label">${labels[pos]}</h3><div class="squad-section">`;
-                    html += filtered.map(p => `
-                        <div class="player-card">
-                            <div class="player-number">${p.player.number || '--'}</div>
-                            <div class="player-info">
-                                <h4>${p.player.name}</h4>
-                                <p>${p.player.age} años</p>
-                            </div>
-                        </div>
-                    `).join('');
-                    html += `</div>`;
-                }
-            });
-            container.innerHTML = html;
+    function renderSquad(data) {
+        const tbody = document.getElementById('plantilla-table');
+        if (!data || data.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="2" class="empty-state">No hay datos de plantilla</td></tr>`;
+            return;
         }
+        
+        tbody.innerHTML = data.map(p => `
+            <tr class="table-row">
+                <td class="team-name">${p.player.name}</td>
+                <td class="date-col">${p.player.age}</td>
+            </tr>
+        `).join('');
+    }
 
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+    function renderTransfers(data) {
+        const tbody = document.getElementById('traspasos-table').querySelector('tbody');
+        if (!data || data.length === 0) {
+            tbody.innerHTML = `<tr><td class="empty-state">No hay traspasos registrados esta temporada en Flashscore.</td></tr>`;
+            return;
+        }
+        tbody.innerHTML = data.map(t => `
+            <tr class="table-row">
+                <td width="100" class="date-col">${t.date}</td>
+                <td class="team-name">${t.player}</td>
+                <td class="date-col">${t.type}</td>
+            </tr>
+        `).join('');
+    }
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        loadData();
-    </script>
+    // Load data on start
+    document.addEventListener('DOMContentLoaded', loadData);
+</script>
 </body>
 </html>
