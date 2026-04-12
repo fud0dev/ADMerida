@@ -371,7 +371,7 @@
     <script>
         async function loadData() {
             try {
-                const [fixtures, standings, news, players, metadata] = await Promise.all([
+                const results = await Promise.all([
                     fetch('data/fixtures.json').then(r => r.json()),
                     fetch('data/standings.json').then(r => r.json()),
                     fetch('data/news.json').then(r => r.json()),
@@ -379,11 +379,16 @@
                     fetch('data/metadata.json').then(r => r.json())
                 ]);
 
+                const [fixtures, standings, news, players, metadata] = results;
+
                 renderMetadata(metadata);
-                renderFixtures(fixtures.response);
-                renderStandings(standings.response[0].league.standings[0]);
-                renderNews(news);
-                renderSquad(players.response);
+                
+                if (fixtures && fixtures.response) renderFixtures(fixtures.response);
+                if (standings && standings.response && standings.response[0]) {
+                    renderStandings(standings.response[0].league.standings[0]);
+                }
+                if (news) renderNews(news);
+                if (players && players.response) renderSquad(players.response);
 
             } catch (err) {
                 console.error("Error cargando los datos:", err);
