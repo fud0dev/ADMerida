@@ -373,14 +373,12 @@
         }
         
         tbody.innerHTML = data.map(m => {
-            // Flashscore typically formats dates as "12.04." without the time in standard tables
+            // Include exactly how Flashscore scraper provides it, which includes the hour
             let formattedDate = m.dateStr || '';
-            if (formattedDate.includes(" ")) {
-                formattedDate = formattedDate.split(" ")[0]; // Take only "12.04."
-            }
+            
             return `
             <tr class="table-row">
-                <td width="70" class="date-col">${formattedDate}</td>
+                <td width="90" class="date-col">${formattedDate}</td>
                 <td class="team-name" style="${m.home.includes('Mérida') ? 'color: var(--text-primary); font-weight:700;' : ''}">${m.home}</td>
                 <td class="team-name" style="${m.away.includes('Mérida') ? 'color: var(--text-primary); font-weight:700;' : ''}">${m.away}</td>
                 <td class="score">${m.score_home || '-'} <br> ${m.score_away || '-'}</td>
