@@ -251,28 +251,76 @@
         /* FLASHSCORE MATCH ROW CLONE */
         .fs-match-row {
             display: flex;
-            align-items: center;
-            padding: 8px 15px;
-            border-bottom: 1px solid var(--border-color);
-            transition: background-color 0.2s;
+            align-items: stretch;
+            padding: 4px;
+            margin: 8px 10px;
+            border-radius: 6px;
+            transition: filter 0.2s;
             font-size: 13px;
         }
 
+        .fs-match-row:last-child {
+            margin-bottom: 8px;
+        }
+
         .fs-match-row:hover {
-            background-color: var(--bg-hover);
+            filter: brightness(1.1);
             cursor: pointer;
         }
 
+        .match-g { background-color: #00a651; }
+        .match-e { background-color: #f7a600; }
+        .match-p { background-color: #ff3b40; }
+        
+        .match-default { 
+            background-color: transparent; 
+            border-bottom: 1px solid var(--border-color); 
+            border-radius: 0; 
+            margin: 0;
+            padding: 8px 0;
+        }
+
+        .match-box {
+            background-color: rgba(13, 20, 30, 0.75);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .match-default .match-box {
+            background-color: transparent;
+        }
+
         .fs-match-date {
-            width: 70px;
-            color: var(--text-secondary);
-            text-align: center;
+            width: 80px;
+            color: #fff;
+            align-items: center;
             flex-shrink: 0;
-            margin-right: 15px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .match-default .fs-match-date {
+            color: var(--text-secondary);
         }
 
         .fs-match-teams {
             flex-grow: 1;
+            margin: 0 4px;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .match-default .fs-match-teams {
+            justify-content: flex-start;
+            margin: 0;
+            padding: 4px 15px;
+        }
+
+        .teams-wrapper {
             display: flex;
             flex-direction: column;
             gap: 6px;
@@ -289,54 +337,22 @@
         }
 
         .fs-match-scores {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+            width: 45px;
+            align-items: center;
+            flex-shrink: 0;
             gap: 6px;
-            margin-right: 20px;
+            padding: 8px 0;
         }
 
         .fs-score {
             font-weight: 700;
-            color: var(--win-color);
+            color: #fff;
+            text-align: center;
         }
-
-        .fs-match-badge {
-            width: 24px;
-            flex-shrink: 0;
-            display: flex;
-            justify-content: center;
+        
+        .match-default .fs-score {
+            color: var(--text-primary);
         }
-
-        .badge {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            color: white;
-            border-radius: 4px;
-        }
-
-        .badge-g {
-            background-color: #00a651;
-        }
-
-        /* WIN */
-        .badge-e {
-            background-color: #f7a600;
-        }
-
-        /* DRAW */
-        .badge-p {
-            background-color: #ff3b40;
-        }
-
-        /* LOSS */
-
         .form-badge {
             display: inline-flex;
             justify-content: center;
@@ -398,20 +414,30 @@
             }
 
             .fs-match-row {
-                padding: 10px 8px;
+                margin: 6px 4px;
+                padding: 3px;
+                border-radius: 4px;
+            }
+
+            .match-default {
+                margin: 0;
+                padding: 6px 0;
+                border-radius: 0;
             }
 
             .fs-match-date {
                 width: 45px;
                 font-size: 10px;
-                margin-right: 8px;
             }
 
             .fs-match-teams {
-                font-size: 12px;
+                font-size: 11px;
+                padding: 6px 4px;
+                margin: 0 2px;
             }
 
-            .fs-score {
+            .fs-match-scores {
+                width: 30px;
                 font-size: 12px;
             }
 
@@ -626,30 +652,29 @@
         data.forEach(function(m) {
             const parts = (m.dateStr || '').split(' ');
             const dateTop    = parts[0] || '';
-            const dateBottom = parts[1] || '';
 
-            let badgeHtml = '<div style="width:24px"></div>';
+            let resultClass = 'match-default';
             if (m.score_home !== '' && m.score_away !== '' && m.score_home !== '-' && m.score_away !== '-') {
                 const sh   = parseInt(m.score_home);
                 const sa   = parseInt(m.score_away);
                 const home = m.home.includes('Mérida') || m.home.includes('Merida');
                 if (sh === sa)
-                    badgeHtml = '<div class="badge badge-e"></div>';
+                    resultClass = 'match-e';
                 else if ((home && sh > sa) || (!home && sa > sh))
-                    badgeHtml = '<div class="badge badge-g"></div>';
+                    resultClass = 'match-g';
                 else
-                    badgeHtml = '<div class="badge badge-p"></div>';
+                    resultClass = 'match-p';
             }
 
             const isMeridaHome = m.home.includes('Mérida') || m.home.includes('Merida');
             const isMeridaAway = m.away.includes('Mérida') || m.away.includes('Merida');
 
-            html += '<div class="fs-match-row">'
-                + '<div class="fs-match-date">'
-                + '<div style="margin-bottom:4px">' + dateTop + '</div>'
-                + '<div style="color:var(--text-secondary)">' + dateBottom + '</div>'
+            html += '<div class="fs-match-row ' + resultClass + '">'
+                + '<div class="match-box fs-match-date">'
+                + '<div>' + dateTop + '</div>'
                 + '</div>'
-                + '<div class="fs-match-teams">'
+                + '<div class="match-box fs-match-teams">'
+                + '<div class="teams-wrapper">'
                 + '<div class="fs-team' + (isMeridaHome ? ' fw-bold' : '') + '">'
                 + logoImg(m.home)
                 + m.home
@@ -659,11 +684,11 @@
                 + m.away
                 + '</div>'
                 + '</div>'
-                + '<div class="fs-match-scores">'
-                + '<div class="fs-score">' + (m.score_home || '-') + '</div>'
-                + '<div class="fs-score">' + (m.score_away || '-') + '</div>'
                 + '</div>'
-                + '<div class="fs-match-badge">' + badgeHtml + '</div>'
+                + '<div class="match-box fs-match-scores">'
+                + '<div class="fs-score">' + (m.score_home !== '' ? m.score_home : '-') + '</div>'
+                + '<div class="fs-score">' + (m.score_away !== '' ? m.score_away : '-') + '</div>'
+                + '</div>'
                 + '</div>';
         });
         container.innerHTML = html;
