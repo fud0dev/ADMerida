@@ -367,6 +367,26 @@
             font-weight: 700;
             margin-right: 4px;
         }
+        
+        .badge-g { background-color: #00a651; }
+        .badge-e { background-color: #f7a600; }
+        .badge-p { background-color: #ff3b40; }
+
+        .rank-box {
+            display: inline-block;
+            min-width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 0 4px;
+        }
+
+        .rank-blue { background-color: #00529f; color: #fff; }
+        .rank-green { background-color: #00a651; color: #fff; }
+        .rank-red { background-color: #ff3b40; color: #fff; }
 
         .team-logo {
             width: 18px;
@@ -701,6 +721,7 @@
             return;
         }
         const standings = data.response[0].league.standings[0];
+        const totalTeams = standings.length;
         let rows = '';
         standings.forEach(function(s) {
             const isMerida = s.team.id === 2501 || s.team.name.includes('Mérida') || s.team.name.includes('Merida');
@@ -711,8 +732,19 @@
                 const bg  = cls ? '' : 'background-color:#555e6b;';
                 formHtml += '<div class="form-badge ' + cls + '" style="' + bg + '">' + f + '</div>';
             });
+            
+            let rankClass = '';
+            if (s.rank === 1) rankClass = 'rank-blue';
+            else if (s.rank >= 2 && s.rank <= 5) rankClass = 'rank-green';
+            else if (s.rank >= totalTeams - 4) rankClass = 'rank-red';
+
+            let rankHtml = s.rank + '.';
+            if (rankClass) {
+                rankHtml = '<span class="rank-box ' + rankClass + '">' + rankHtml + '</span>';
+            }
+
             rows += '<tr class="table-row' + (isMerida ? ' fw-bold' : '') + '" style="' + (isMerida ? 'background-color:var(--bg-hover)' : '') + '">'
-                + '<td class="date-col">' + s.rank + '.</td>'
+                + '<td class="date-col" style="text-align:center;">' + rankHtml + '</td>'
                 + '<td class="team-name" style="' + (isMerida ? 'color:#fff' : '') + '">'
                 + logoImg(s.team.name)
                 + s.team.name
