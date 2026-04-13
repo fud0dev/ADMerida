@@ -210,29 +210,6 @@
             align-items: center;
         }
 
-        .news-item {
-            display: block;
-            padding: 15px;
-            border-bottom: 1px solid var(--border-color);
-            text-decoration: none;
-            color: var(--text-primary);
-            transition: background-color 0.2s;
-        }
-
-        .news-item:hover {
-            background-color: var(--bg-hover);
-        }
-
-        .news-title {
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .news-meta {
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
 
         .empty-state {
             padding: 40px 20px;
@@ -536,7 +513,6 @@
             <div class="tab active" onclick="switchTab('resultados', this)">ÚLTIMOS RESULTADOS</div>
             <div class="tab" onclick="switchTab('partidos', this)">PRÓXIMOS PARTIDOS</div>
             <div class="tab" onclick="switchTab('clasificacion', this)">CLASIFICACIÓN</div>
-            <div class="tab" onclick="switchTab('noticias', this)">NOTICIAS</div>
         </div>
 
         <div class="content">
@@ -549,10 +525,6 @@
             <div id="partidos" class="tab-content">
                 <div class="section-title">Próximos Partidos</div>
                 <div id="partidos-container"></div>
-            </div>
-
-            <div id="noticias" class="tab-content">
-                <div id="noticias-list"></div>
             </div>
 
             <div id="clasificacion" class="tab-content">
@@ -635,20 +607,18 @@
         try {
             const urls = [
                 'data/resultados.json', 'data/partidos.json',
-                'data/standings.json', 'data/news.json', 'data/metadata.json'
+                'data/standings.json', 'data/metadata.json'
             ];
             const responses = await Promise.all(urls.map(u => fetch(u).catch(() => null)));
 
             const resultsData   = (await (responses[0]?.json() || { response: [] })).response;
             const partidosData  = (await (responses[1]?.json() || { response: [] })).response;
             const standingsData = await (responses[2]?.json() || { response: [] });
-            const newsData      = await (responses[3]?.json() || []);
-            const meta          = await (responses[4]?.json() || { last_updated: 'Desconocido' });
+            const meta          = await (responses[3]?.json() || { last_updated: 'Desconocido' });
 
             renderMatches('resultados-container', resultsData);
             renderMatches('partidos-container',   partidosData);
             renderStandings(standingsData);
-            renderNews(newsData);
 
             document.getElementById('syncStatus').innerText =
                 'Última sincronización: ' + new Date(meta.last_updated).toLocaleString();
@@ -762,21 +732,7 @@
         tbody.innerHTML = rows;
     }
 
-    function renderNews(data) {
-        const container = document.getElementById('noticias-list');
-        if (!data || data.length === 0) {
-            container.innerHTML = '<div class="empty-state">No hay noticias recientes</div>';
-            return;
-        }
-        let html = '';
-        data.forEach(function(n) {
-            html += '<a href="' + n.url + '" target="_blank" class="news-item">'
-                + '<div class="news-meta">' + n.source + ' &bull; ' + n.date + '</div>'
-                + '<div class="news-title">' + n.title + '</div>'
-                + '</a>';
-        });
-        container.innerHTML = html;
-    }
+
 
     document.addEventListener('DOMContentLoaded', loadData);
 </script>
