@@ -868,7 +868,7 @@
 
             rows += '<tr class="table-row' + (isMerida ? ' fw-bold' : '') + '" style="' + (isMerida ? 'background-color:var(--bg-hover)' : '') + '">'
                 + '<td class="date-col" style="text-align:center;">' + rankHtml + '</td>'
-                + '<td class="team-name" style="' + (isMerida ? 'color:#fff' : '') + '">'
+                + '<td class="team-name" style="' + (isMerida ? 'color:var(--accent-color)' : '') + '">'
                 + logoImg(s.team.name)
                 + s.team.name
                 + '</td>'
@@ -878,7 +878,7 @@
                 + '<td style="text-align:center;color:var(--text-secondary)">' + st.p + '</td>'
                 + '<td style="text-align:center;color:var(--text-secondary)">' + st.goals + '</td>'
                 + '<td style="text-align:center;color:var(--text-secondary)">' + st.diff + '</td>'
-                + '<td style="text-align:center;font-weight:bold;color:#fff">' + s.points + '</td>'
+                + '<td style="text-align:center;font-weight:bold;color:var(--text-primary)">' + s.points + '</td>'
                 + '<td style="text-align:center"><div style="display:flex;flex-wrap:wrap;gap:2px;justify-content:center">' + formHtml + '</div></td>'
                 + '</tr>';
         });
