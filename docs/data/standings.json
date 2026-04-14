@@ -58,11 +58,11 @@
                 "name": "Real Madrid B",
                 "id": 3
               },
-              "points": 49,
+              "points": 50,
               "stats": {
-                "pj": "32",
+                "pj": "33",
                 "g": "14",
-                "e": "7",
+                "e": "8",
                 "p": "11",
                 "goals": "51:41",
                 "diff": "10"
@@ -79,32 +79,8 @@
             {
               "rank": 4,
               "team": {
-                "name": "Zamora",
-                "id": 4
-              },
-              "points": 49,
-              "stats": {
-                "pj": "32",
-                "g": "13",
-                "e": "10",
-                "p": "9",
-                "goals": "43:37",
-                "diff": "6"
-              },
-              "form": [
-                "?",
-                "G",
-                "P",
-                "G",
-                "E",
-                "G"
-              ]
-            },
-            {
-              "rank": 5,
-              "team": {
                 "name": "Pontevedra",
-                "id": 5
+                "id": 4
               },
               "points": 49,
               "stats": {
@@ -122,6 +98,30 @@
                 "G",
                 "P",
                 "E"
+              ]
+            },
+            {
+              "rank": 5,
+              "team": {
+                "name": "Zamora",
+                "id": 5
+              },
+              "points": 49,
+              "stats": {
+                "pj": "32",
+                "g": "13",
+                "e": "10",
+                "p": "9",
+                "goals": "43:37",
+                "diff": "6"
+              },
+              "form": [
+                "?",
+                "G",
+                "P",
+                "G",
+                "E",
+                "G"
               ]
             },
             {
@@ -346,11 +346,11 @@
                 "name": "Ourense CF",
                 "id": 15
               },
-              "points": 37,
+              "points": 38,
               "stats": {
-                "pj": "32",
+                "pj": "33",
                 "g": "9",
-                "e": "10",
+                "e": "11",
                 "p": "13",
                 "goals": "36:37",
                 "diff": "-1"
