@@ -79,8 +79,56 @@
             {
               "rank": 4,
               "team": {
-                "name": "Pontevedra",
+                "name": "Ponferradina",
                 "id": 4
+              },
+              "points": 50,
+              "stats": {
+                "pj": "33",
+                "g": "14",
+                "e": "8",
+                "p": "11",
+                "goals": "37:28",
+                "diff": "9"
+              },
+              "form": [
+                "?",
+                "P",
+                "G",
+                "E",
+                "G",
+                "E"
+              ]
+            },
+            {
+              "rank": 5,
+              "team": {
+                "name": "Zamora",
+                "id": 5
+              },
+              "points": 50,
+              "stats": {
+                "pj": "33",
+                "g": "13",
+                "e": "11",
+                "p": "9",
+                "goals": "43:37",
+                "diff": "6"
+              },
+              "form": [
+                "?",
+                "G",
+                "P",
+                "G",
+                "E",
+                "G"
+              ]
+            },
+            {
+              "rank": 6,
+              "team": {
+                "name": "Pontevedra",
+                "id": 6
               },
               "points": 49,
               "stats": {
@@ -101,43 +149,19 @@
               ]
             },
             {
-              "rank": 5,
-              "team": {
-                "name": "Zamora",
-                "id": 5
-              },
-              "points": 49,
-              "stats": {
-                "pj": "32",
-                "g": "13",
-                "e": "10",
-                "p": "9",
-                "goals": "43:37",
-                "diff": "6"
-              },
-              "form": [
-                "?",
-                "G",
-                "P",
-                "G",
-                "E",
-                "G"
-              ]
-            },
-            {
-              "rank": 6,
+              "rank": 7,
               "team": {
                 "name": "Barakaldo",
-                "id": 6
+                "id": 7
               },
               "points": 48,
               "stats": {
-                "pj": "32",
+                "pj": "33",
                 "g": "12",
                 "e": "12",
-                "p": "8",
-                "goals": "41:33",
-                "diff": "8"
+                "p": "9",
+                "goals": "41:34",
+                "diff": "7"
               },
               "form": [
                 "?",
@@ -149,10 +173,10 @@
               ]
             },
             {
-              "rank": 7,
+              "rank": 8,
               "team": {
                 "name": "Unionistas",
-                "id": 7
+                "id": 8
               },
               "points": 48,
               "stats": {
@@ -173,34 +197,34 @@
               ]
             },
             {
-              "rank": 8,
+              "rank": 9,
               "team": {
-                "name": "Ponferradina",
-                "id": 8
+                "name": "AD Mérida",
+                "id": 2501
               },
-              "points": 47,
+              "points": 48,
               "stats": {
-                "pj": "32",
+                "pj": "33",
                 "g": "13",
-                "e": "8",
+                "e": "9",
                 "p": "11",
-                "goals": "36:28",
-                "diff": "8"
+                "goals": "43:45",
+                "diff": "-2"
               },
               "form": [
                 "?",
+                "E",
                 "P",
                 "G",
                 "E",
-                "G",
-                "E"
+                "P"
               ]
             },
             {
-              "rank": 9,
+              "rank": 10,
               "team": {
                 "name": "Lugo",
-                "id": 9
+                "id": 10
               },
               "points": 45,
               "stats": {
@@ -214,30 +238,6 @@
               "form": [
                 "?",
                 "P",
-                "P",
-                "G",
-                "E",
-                "P"
-              ]
-            },
-            {
-              "rank": 10,
-              "team": {
-                "name": "AD Mérida",
-                "id": 2501
-              },
-              "points": 45,
-              "stats": {
-                "pj": "32",
-                "g": "12",
-                "e": "9",
-                "p": "11",
-                "goals": "42:45",
-                "diff": "-3"
-              },
-              "form": [
-                "?",
-                "E",
                 "P",
                 "G",
                 "E",
@@ -442,11 +442,11 @@
                 "name": "Osasuna B",
                 "id": 19
               },
-              "points": 30,
+              "points": 31,
               "stats": {
-                "pj": "32",
+                "pj": "33",
                 "g": "7",
-                "e": "9",
+                "e": "10",
                 "p": "16",
                 "goals": "23:38",
                 "diff": "-15"
@@ -468,12 +468,12 @@
               },
               "points": 27,
               "stats": {
-                "pj": "32",
+                "pj": "33",
                 "g": "6",
                 "e": "9",
-                "p": "17",
-                "goals": "29:43",
-                "diff": "-14"
+                "p": "18",
+                "goals": "29:44",
+                "diff": "-15"
               },
               "form": [
                 "?",
