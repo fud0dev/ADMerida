@@ -1,6 +1,14 @@
 {
   "response": [
     {
+      "dateStr": "24.04. 18:30",
+      "home": "Arenas Getxo",
+      "away": "AD Mérida",
+      "score_home": "2",
+      "score_away": "0",
+      "status": "FT"
+    },
+    {
       "dateStr": "19.04. 14:00",
       "home": "Arenteiro",
       "away": "AD Mérida",
@@ -149,14 +157,6 @@
       "home": "AD Mérida",
       "away": "Ourense CF",
       "score_home": "3",
-      "score_away": "2",
-      "status": "FT"
-    },
-    {
-      "dateStr": "29.11.2025",
-      "home": "Racing Club Ferrol",
-      "away": "AD Mérida",
-      "score_home": "2",
       "score_away": "2",
       "status": "FT"
     }
