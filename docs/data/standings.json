@@ -199,32 +199,56 @@
             {
               "rank": 9,
               "team": {
-                "name": "AD Mérida",
-                "id": 2501
+                "name": "Lugo",
+                "id": 9
               },
-              "points": 48,
+              "points": 49,
               "stats": {
-                "pj": "34",
-                "g": "13",
-                "e": "9",
-                "p": "12",
-                "goals": "44:47",
+                "pj": "35",
+                "g": "12",
+                "e": "13",
+                "p": "10",
+                "goals": "34:37",
                 "diff": "-3"
               },
               "form": [
                 "?",
-                "P",
                 "G",
+                "P",
                 "E",
                 "P",
-                "G"
+                "P"
               ]
             },
             {
               "rank": 10,
               "team": {
+                "name": "AD Mérida",
+                "id": 2501
+              },
+              "points": 48,
+              "stats": {
+                "pj": "35",
+                "g": "13",
+                "e": "9",
+                "p": "13",
+                "goals": "44:49",
+                "diff": "-5"
+              },
+              "form": [
+                "?",
+                "P",
+                "P",
+                "G",
+                "E",
+                "P"
+              ]
+            },
+            {
+              "rank": 11,
+              "team": {
                 "name": "Racing Club Ferrol",
-                "id": 10
+                "id": 11
               },
               "points": 47,
               "stats": {
@@ -245,10 +269,10 @@
               ]
             },
             {
-              "rank": 11,
+              "rank": 12,
               "team": {
                 "name": "Arenas Getxo",
-                "id": 11
+                "id": 12
               },
               "points": 47,
               "stats": {
@@ -269,48 +293,24 @@
               ]
             },
             {
-              "rank": 12,
-              "team": {
-                "name": "Lugo",
-                "id": 12
-              },
-              "points": 46,
-              "stats": {
-                "pj": "34",
-                "g": "11",
-                "e": "13",
-                "p": "10",
-                "goals": "32:37",
-                "diff": "-5"
-              },
-              "form": [
-                "?",
-                "P",
-                "E",
-                "P",
-                "P",
-                "G"
-              ]
-            },
-            {
               "rank": 13,
               "team": {
                 "name": "Athletic Club B",
                 "id": 13
               },
-              "points": 45,
+              "points": 46,
               "stats": {
-                "pj": "34",
+                "pj": "35",
                 "g": "12",
-                "e": "9",
+                "e": "10",
                 "p": "13",
-                "goals": "34:38",
+                "goals": "36:40",
                 "diff": "-4"
               },
               "form": [
                 "?",
                 "E",
-                "P",
+                "E",
                 "P",
                 "P",
                 "P"
@@ -343,8 +343,32 @@
             {
               "rank": 15,
               "team": {
-                "name": "CF Talavera",
+                "name": "Ourense CF",
                 "id": 15
+              },
+              "points": 39,
+              "stats": {
+                "pj": "35",
+                "g": "9",
+                "e": "12",
+                "p": "14",
+                "goals": "40:42",
+                "diff": "-2"
+              },
+              "form": [
+                "?",
+                "E",
+                "P",
+                "E",
+                "G",
+                "P"
+              ]
+            },
+            {
+              "rank": 16,
+              "team": {
+                "name": "CF Talavera",
+                "id": 16
               },
               "points": 39,
               "stats": {
@@ -365,34 +389,34 @@
               ]
             },
             {
-              "rank": 16,
+              "rank": 17,
               "team": {
-                "name": "Ourense CF",
-                "id": 16
+                "name": "Cacereño",
+                "id": 17
               },
               "points": 38,
               "stats": {
-                "pj": "34",
-                "g": "9",
-                "e": "11",
-                "p": "14",
-                "goals": "38:40",
-                "diff": "-2"
+                "pj": "35",
+                "g": "8",
+                "e": "14",
+                "p": "13",
+                "goals": "35:45",
+                "diff": "-10"
               },
               "form": [
                 "?",
-                "P",
-                "E",
                 "G",
+                "E",
                 "P",
+                "G",
                 "E"
               ]
             },
             {
-              "rank": 17,
+              "rank": 18,
               "team": {
                 "name": "Guadalajara",
-                "id": 17
+                "id": 18
               },
               "points": 37,
               "stats": {
@@ -413,10 +437,10 @@
               ]
             },
             {
-              "rank": 18,
+              "rank": 19,
               "team": {
                 "name": "Osasuna B",
-                "id": 18
+                "id": 19
               },
               "points": 36,
               "stats": {
@@ -437,50 +461,26 @@
               ]
             },
             {
-              "rank": 19,
-              "team": {
-                "name": "Cacereño",
-                "id": 19
-              },
-              "points": 36,
-              "stats": {
-                "pj": "35",
-                "g": "7",
-                "e": "15",
-                "p": "13",
-                "goals": "31:45",
-                "diff": "-14"
-              },
-              "form": [
-                "?",
-                "E",
-                "P",
-                "G",
-                "E",
-                "P"
-              ]
-            },
-            {
               "rank": 20,
               "team": {
                 "name": "Arenteiro",
                 "id": 20
               },
-              "points": 28,
+              "points": 27,
               "stats": {
                 "pj": "35",
                 "g": "6",
-                "e": "10",
-                "p": "19",
-                "goals": "29:46",
-                "diff": "-17"
+                "e": "9",
+                "p": "20",
+                "goals": "29:50",
+                "diff": "-21"
               },
               "form": [
                 "?",
                 "P",
                 "P",
-                "E",
                 "P",
+                "E",
                 "P"
               ]
             }

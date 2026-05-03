@@ -1,6 +1,14 @@
 {
   "response": [
     {
+      "dateStr": "03.05. 14:00",
+      "home": "AD Mérida",
+      "away": "Lugo",
+      "score_home": "0",
+      "score_away": "2",
+      "status": "FT"
+    },
+    {
       "dateStr": "24.04. 18:30",
       "home": "Arenas Getxo",
       "away": "AD Mérida",
@@ -150,14 +158,6 @@
       "away": "AD Mérida",
       "score_home": "2",
       "score_away": "1",
-      "status": "FT"
-    },
-    {
-      "dateStr": "07.12.2025",
-      "home": "AD Mérida",
-      "away": "Ourense CF",
-      "score_home": "3",
-      "score_away": "2",
       "status": "FT"
     }
   ]
