@@ -1,6 +1,14 @@
 {
   "response": [
     {
+      "dateStr": "17.05. 15:00",
+      "home": "AD Mérida",
+      "away": "Unionistas",
+      "score_home": "1",
+      "score_away": "1",
+      "status": "FT"
+    },
+    {
       "dateStr": "09.05. 12:00",
       "home": "Barakaldo",
       "away": "AD Mérida",
@@ -150,14 +158,6 @@
       "away": "AD Mérida",
       "score_home": "1",
       "score_away": "0",
-      "status": "FT"
-    },
-    {
-      "dateStr": "19.12.2025",
-      "home": "AD Mérida",
-      "away": "Athletic Club B",
-      "score_home": "2",
-      "score_away": "3",
       "status": "FT"
     }
   ]
