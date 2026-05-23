@@ -1,12 +1,3 @@
 {
-  "response": [
-    {
-      "dateStr": "23.05. 16:30",
-      "home": "Osasuna B",
-      "away": "AD Mérida",
-      "score_home": "-",
-      "score_away": "-",
-      "status": "NS"
-    }
-  ]
+  "response": []
 }

@@ -1,6 +1,14 @@
 {
   "response": [
     {
+      "dateStr": "23.05. 16:30",
+      "home": "Osasuna B",
+      "away": "AD Mérida",
+      "score_home": "1",
+      "score_away": "2",
+      "status": "FT"
+    },
+    {
       "dateStr": "17.05. 15:00",
       "home": "AD Mérida",
       "away": "Unionistas",
@@ -148,14 +156,6 @@
       "dateStr": "11.01. 11:00",
       "home": "AD Mérida",
       "away": "Osasuna B",
-      "score_home": "1",
-      "score_away": "0",
-      "status": "FT"
-    },
-    {
-      "dateStr": "03.01. 11:00",
-      "home": "Lugo",
-      "away": "AD Mérida",
       "score_home": "1",
       "score_away": "0",
       "status": "FT"
