@@ -1,3 +1,164 @@
 {
-  "response": []
+  "response": [
+    {
+      "dateStr": "30.08. 15:00",
+      "home": "AD Mérida",
+      "away": "Dep. Fabril",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "06.09. 15:00",
+      "home": "Cultural Leonesa",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "13.09. 15:00",
+      "home": "AD Mérida",
+      "away": "Mirandés",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "20.09. 15:00",
+      "home": "Ponferradina",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "27.09. 15:00",
+      "home": "AD Mérida",
+      "away": "UD Logroñés",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "04.10. 15:00",
+      "home": "AD Mérida",
+      "away": "Cacereño",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "11.10. 15:00",
+      "home": "Pontevedra",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "18.10. 15:00",
+      "home": "Arenas Getxo",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "25.10. 16:00",
+      "home": "AD Mérida",
+      "away": "CD Coria",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "01.11. 16:00",
+      "home": "Lugo",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "08.11. 16:00",
+      "home": "AD Mérida",
+      "away": "Athletic Club B",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "15.11. 16:00",
+      "home": "UD Ourense",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "22.11. 16:00",
+      "home": "AD Mérida",
+      "away": "Real Unión",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "29.11. 16:00",
+      "home": "Racing Club Ferrol",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "06.12. 16:00",
+      "home": "AD Mérida",
+      "away": "Zamora",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "13.12. 16:00",
+      "home": "Real Avilés",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "20.12. 16:00",
+      "home": "AD Mérida",
+      "away": "CD Extremadura",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "03.01.2027",
+      "home": "Barakaldo",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "10.01.2027",
+      "home": "AD Mérida",
+      "away": "Unionistas",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "17.01.2027",
+      "home": "Dep. Fabril",
+      "away": "AD Mérida",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    }
+  ]
 }
