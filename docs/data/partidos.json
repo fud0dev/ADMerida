@@ -2,6 +2,14 @@
   "response": [
     {
       "dateStr": "",
+      "home": "Benfica B (Por)",
+      "away": "AD Mérida (Esp)",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "",
       "home": "AD Mérida",
       "away": "Dep. Fabril",
       "score_home": "-",
@@ -148,14 +156,6 @@
       "dateStr": "",
       "home": "AD Mérida",
       "away": "Unionistas",
-      "score_home": "-",
-      "score_away": "-",
-      "status": "NS"
-    },
-    {
-      "dateStr": "",
-      "home": "Dep. Fabril",
-      "away": "AD Mérida",
       "score_home": "-",
       "score_away": "-",
       "status": "NS"
