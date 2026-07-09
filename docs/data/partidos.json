@@ -10,6 +10,14 @@
     },
     {
       "dateStr": "",
+      "home": "Leganés (Esp)",
+      "away": "AD Mérida (Esp)",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "",
       "home": "AD Mérida",
       "away": "Dep. Fabril",
       "score_home": "-",
@@ -148,14 +156,6 @@
       "dateStr": "",
       "home": "Barakaldo",
       "away": "AD Mérida",
-      "score_home": "-",
-      "score_away": "-",
-      "status": "NS"
-    },
-    {
-      "dateStr": "",
-      "home": "AD Mérida",
-      "away": "Unionistas",
       "score_home": "-",
       "score_away": "-",
       "status": "NS"
