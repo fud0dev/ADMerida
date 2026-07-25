@@ -2,6 +2,14 @@
   "response": [
     {
       "dateStr": "",
+      "home": "Benfica B (Por)",
+      "away": "AD Mérida (Esp)",
+      "score_home": "4",
+      "score_away": "0",
+      "status": "FT"
+    },
+    {
+      "dateStr": "",
       "home": "Osasuna B",
       "away": "AD Mérida",
       "score_home": "1",
@@ -150,14 +158,6 @@
       "away": "AD Mérida",
       "score_home": "1",
       "score_away": "1",
-      "status": "FT"
-    },
-    {
-      "dateStr": "",
-      "home": "AD Mérida",
-      "away": "Osasuna B",
-      "score_home": "1",
-      "score_away": "0",
       "status": "FT"
     }
   ]

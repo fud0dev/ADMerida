@@ -2,14 +2,6 @@
   "response": [
     {
       "dateStr": "",
-      "home": "Benfica B (Por)",
-      "away": "AD Mérida (Esp)",
-      "score_home": "-",
-      "score_away": "-",
-      "status": "NS"
-    },
-    {
-      "dateStr": "",
       "home": "Al Nassr Riyadh (Sau)",
       "away": "AD Mérida (Esp)",
       "score_home": "-",
@@ -156,6 +148,14 @@
       "dateStr": "",
       "home": "AD Mérida",
       "away": "CD Extremadura",
+      "score_home": "-",
+      "score_away": "-",
+      "status": "NS"
+    },
+    {
+      "dateStr": "",
+      "home": "Barakaldo",
+      "away": "AD Mérida",
       "score_home": "-",
       "score_away": "-",
       "status": "NS"
