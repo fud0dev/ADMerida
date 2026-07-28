@@ -2,6 +2,14 @@
   "response": [
     {
       "dateStr": "",
+      "home": "AD Mérida (Esp)",
+      "away": "Al Nassr Riyadh (Sau)",
+      "score_home": "0",
+      "score_away": "2",
+      "status": "FT"
+    },
+    {
+      "dateStr": "",
       "home": "Benfica B (Por)",
       "away": "AD Mérida (Esp)",
       "score_home": "4",
@@ -148,14 +156,6 @@
       "dateStr": "",
       "home": "AD Mérida",
       "away": "Pontevedra",
-      "score_home": "1",
-      "score_away": "1",
-      "status": "FT"
-    },
-    {
-      "dateStr": "",
-      "home": "Real Madrid B",
-      "away": "AD Mérida",
       "score_home": "1",
       "score_away": "1",
       "status": "FT"
