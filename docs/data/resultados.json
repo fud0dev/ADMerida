@@ -3,6 +3,14 @@
     {
       "dateStr": "",
       "home": "AD Mérida (Esp)",
+      "away": "Real Betis B (Esp)",
+      "score_home": "2",
+      "score_away": "3",
+      "status": "FT"
+    },
+    {
+      "dateStr": "",
+      "home": "AD Mérida (Esp)",
       "away": "Al Nassr Riyadh (Sau)",
       "score_home": "0",
       "score_away": "2",
@@ -150,14 +158,6 @@
       "away": "AD Mérida",
       "score_home": "1",
       "score_away": "2",
-      "status": "FT"
-    },
-    {
-      "dateStr": "",
-      "home": "AD Mérida",
-      "away": "Pontevedra",
-      "score_home": "1",
-      "score_away": "1",
       "status": "FT"
     }
   ]
