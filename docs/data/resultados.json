@@ -2,6 +2,14 @@
   "response": [
     {
       "dateStr": "",
+      "home": "Leganés (Esp)",
+      "away": "AD Mérida (Esp)",
+      "score_home": "3",
+      "score_away": "0",
+      "status": "FT"
+    },
+    {
+      "dateStr": "",
       "home": "AD Mérida (Esp)",
       "away": "Real Betis B (Esp)",
       "score_home": "2",
@@ -150,14 +158,6 @@
       "away": "Zamora",
       "score_home": "2",
       "score_away": "0",
-      "status": "FT"
-    },
-    {
-      "dateStr": "",
-      "home": "Real Avilés",
-      "away": "AD Mérida",
-      "score_home": "1",
-      "score_away": "2",
       "status": "FT"
     }
   ]
